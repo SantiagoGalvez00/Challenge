@@ -1,0 +1,20 @@
+# Archivos de entorno (variables sensibles)
+.env
+.env.local
+
+# Logs y dependencias
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Carpetas de generación automática
+dist/
+build/
+.coverage/
+
+# Configuraciones de IDE
+.vscode/
+.idea/
+
+# Package node
+node_modules/
