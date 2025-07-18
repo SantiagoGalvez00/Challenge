@@ -14,7 +14,9 @@ const initDatabase = () => {
         CREATE TABLE IF NOT EXISTS usuarios (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nombre TEXT NOT NULL,
-            email TEXT NOT NULL UNIQUE
+            apellido TEXT NOT NULL,
+            edad NUM NOT NULL,
+            fechaNacimiento TEXT NOT NULL
         )
     `, (err) => {
         if (err) {
