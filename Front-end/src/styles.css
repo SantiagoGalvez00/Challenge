@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0 0;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    box-sizing: inherit;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 4rem;
+    background: linear-gradient(#1f99a4, #4f5ad0);
+
+    .left-content {
+        min-width: 30%;
+        padding-left: 1.5rem;
+    }
+
+    .right-content {
+        flex: 1 2 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 3rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.content {
+    border: 1px solid red;
+    width: 100%;
+    flex: 1
+}
