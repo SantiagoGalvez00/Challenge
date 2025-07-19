@@ -42,3 +42,11 @@ body {
     width: 100%;
     flex: 1
 }
+
+.view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 0;
+}

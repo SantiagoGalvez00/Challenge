@@ -1,1 +1,25 @@
-<p>new-client works!</p>
+<div class="view">
+    <div>
+        <h1>Crear nuevo cliente</h1>
+    </div>
+    <form class="form" [formGroup]="newClient" (ngSubmit)="onSubmit()">
+        <div class="input">
+            <label for="name">Nombre</label>
+            <input class="fullWidth" id="name" type="text" formControlName="nombre" />
+        </div>
+        <div class="input">
+            <label for="apellido">Apellido</label>
+            <input class="fullWidth" id="apellido" type="text" formControlName="apellido" />
+        </div>
+        <div class="input">
+            <label for="edad">Edad</label>
+            <input class="fullWidth" id="edad" type="text" formControlName="edad" />
+        </div>
+        <div class="input">
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input class="fullWidth" id="fechaNacimiento" type="text" formControlName="fechaNacimiento" />
+        </div>
+        <button type="submit">Send</button>
+    </form>
+
+</div>
