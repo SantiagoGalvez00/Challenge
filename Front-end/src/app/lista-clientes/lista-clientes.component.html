@@ -1,5 +1,9 @@
 <div class="view">
-    <div *ngFor="let item of list">
-        <h2>{{item}}</h2>
+    <h2>Lista de clientes</h2>
+    <div class="halfWidth box" *ngFor="let item of list">
+        <h3>{{item.nombre}} {{item.apellido}}</h3>
+        <div>Edad: {{item.edad}}</div>
+        <div>Fecha de nacimiento: {{item.fechaNacimiento}}</div>
+        <div>Fecha de muerte estimada: {{item.fechaAproxMuerte}}</div>
     </div>
 </div>

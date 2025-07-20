@@ -1,0 +1,9 @@
+.halfWidth {
+    width: 50%;
+}
+
+.box {
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 0 1.5rem;
+}

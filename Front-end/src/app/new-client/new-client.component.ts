@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 import dayjs from 'dayjs';
+import axios from 'axios';
 
 @Component({
   selector: 'app-new-client',
@@ -23,8 +24,8 @@ export class NewClientComponent {
     })
   }
 
-  onSubmit() {
-    console.log(this.newClient.value);
+  async onSubmit() {
+    await axios.post('http://localhost:5000/crear-cliente', this.newClient.value)
   }
 
 }

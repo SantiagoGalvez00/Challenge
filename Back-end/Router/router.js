@@ -13,7 +13,8 @@ const dayjs = require('dayjs');
 router.post('/crear-cliente', (req, res) => {
     // Tomo los datos pedidos
     const { nombre, apellido, edad, fechaNacimiento } = req.body;
-
+    console.log(req.body);
+    
     //Verifico que existan, sino se retorna error
     if (!nombre || !apellido || !edad || !fechaNacimiento) {
         res.status(400).send('Faltan datos del cliente')
@@ -37,16 +38,6 @@ router.post('/crear-cliente', (req, res) => {
             });
         }
     )
-    //res.send('ok from users');
-})
-
-router.get('/getUsers', (req, res) => {
-    db.all("SELECT * FROM usuarios", [], (err, rows) => {
-        if (err) {
-            return res.status(500).json({ error: err.message });
-        }
-        res.json(rows);
-    });
 })
 
 /**
@@ -64,7 +55,7 @@ router.get('/kpi-clientes', async (req, res) => {
             });
     })
 
-    // Caluculo la media
+    // Calculo la media aritmetica
     const media = (rows.reduce((acc, value) => acc + value.edad, 0) / rows.length);
 
     // Calculo la desviacion Estandar

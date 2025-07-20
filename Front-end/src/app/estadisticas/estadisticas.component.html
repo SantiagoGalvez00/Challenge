@@ -1,17 +1,31 @@
 <div class="view">
     <div class="estadisticas">
         <div>
-            <h3>Media</h3>
-            <div>
-                <p>μ -> {{media}}</p>
-
+            <h2>Promedio</h2>
+            <div class="box">
+                <div class="isFlex justify-start align-center">
+                    <img src="simbolo_media_aritmetica.png" alt="media" height="50px" width="50px"/>
+                    <p class="box-value">{{data.media}}</p>
+                </div>
+                <div>
+                    <p>El promedio es el resultado de sumar todos los valores de un conjunto de datos y dividir el total entre la cantidad de valores en ese conjunto.</p>
+                    <img src="media.png" alt="media" height="100px" width="150px"/>
+                </div>
             </div>
-            <p>descripcion</p>
         </div>
         <div>
-            <h3>desviacion estandar</h3>
-            <p>σ -> {{desEst}}</p>
-            <p>descripcion</p>
+            <h2>Desviación estándar</h2>
+            <div class="box">
+                <div class="isFlex justify-start align-center">
+                    <img src="simbolo_media_aritmetica.png" alt="media" height="50px" width="50px"/>
+                    <p class="box-value">{{data.desviacionEstandar}}</p>
+                </div>
+                <!-- <p>σ -> {{data.desviacionEstandar}}</p> -->
+                <div>
+                    <p>La desviación estándar es una medida estadística que cuantifica la dispersión o variabilidad de un conjunto de datos con respecto a su media.</p>
+                    <img src="desviacion.png" alt="media" height="100px" width="250px"/>
+                </div>
+            </div>
         </div>
     </div>
 </div>
