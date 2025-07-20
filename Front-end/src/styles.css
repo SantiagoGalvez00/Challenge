@@ -65,3 +65,7 @@ body {
 .align-center {
     align-items: center;
 }
+
+.fullWidth { 
+    width: 100%;
+}
