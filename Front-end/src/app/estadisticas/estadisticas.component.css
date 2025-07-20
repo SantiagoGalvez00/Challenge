@@ -18,3 +18,16 @@
     background-color: #c2c2c2;
     font-size: 1.25rem;
 }
+
+.scale05 {
+    transform: scale(0.5);
+}
+
+@media (max-width: 768px) {
+    .estadisticas {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1.5rem;
+    }
+}

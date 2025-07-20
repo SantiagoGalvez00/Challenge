@@ -4,12 +4,19 @@
             <h2>Promedio</h2>
             <div class="box">
                 <div class="isFlex justify-start align-center">
-                    <img src="simbolo_media_aritmetica.png" alt="media" height="50px" width="50px"/>
+                    <div class="scale05">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="100" height="100">
+                            <line x1="40" y1="20" x2="80" y2="20" stroke="black" stroke-width="3" />
+                            <text x="60" y="80" font-family="Arial" font-size="80" text-anchor="middle"
+                                fill="black">x</text>
+                        </svg>
+                    </div>
                     <p class="box-value">{{data.media}}</p>
                 </div>
                 <div>
-                    <p>El promedio es el resultado de sumar todos los valores de un conjunto de datos y dividir el total entre la cantidad de valores en ese conjunto.</p>
-                    <img src="media.png" alt="media" height="100px" width="150px"/>
+                    <p>El promedio es el resultado de sumar todos los valores de un conjunto de datos y dividir el total
+                        entre la cantidad de valores en ese conjunto.</p>
+                    <img src="media.png" alt="media" height="100px" width="150px" />
                 </div>
             </div>
         </div>
@@ -17,13 +24,19 @@
             <h2>Desviación estándar</h2>
             <div class="box">
                 <div class="isFlex justify-start align-center">
-                    <img src="simbolo_media_aritmetica.png" alt="media" height="50px" width="50px"/>
+                    <div class="scale05">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+                            <text x="50" y="70" font-family="Arial" font-size="80" text-anchor="middle"
+                                fill="black">σ</text>
+                        </svg>
+                    </div>
                     <p class="box-value">{{data.desviacionEstandar}}</p>
                 </div>
                 <!-- <p>σ -> {{data.desviacionEstandar}}</p> -->
                 <div>
-                    <p>La desviación estándar es una medida estadística que cuantifica la dispersión o variabilidad de un conjunto de datos con respecto a su media.</p>
-                    <img src="desviacion.png" alt="media" height="100px" width="250px"/>
+                    <p>La desviación estándar es una medida estadística que cuantifica la dispersión o variabilidad de
+                        un conjunto de datos con respecto a su media.</p>
+                    <img src="desviacion.png" alt="media" height="100px" width="250px" />
                 </div>
             </div>
         </div>
