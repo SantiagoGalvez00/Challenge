@@ -1,12 +1,18 @@
 <main class="main">
   <header class="header">
     <div class="left-content">
-      <img src="logo.png" alt="logo" height="100px" width="150px"/>
+      <img src="logo.png" alt="logo" height="100px" width="150px" />
     </div>
     <nav class="right-content">
-      <a routerLink="" routerLinkActive="active">Form</a>
-      <a routerLink="/estadisticas" routerLinkActive="active">Estadisticas</a>
-      <a routerLink="/lista" routerLinkActive="active">lista</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"  class="nav-link">
+        <div class="nav-text">Nuevo cliente</div>
+      </a>
+      <a routerLink="/estadisticas" routerLinkActive="active" class="nav-link">
+        <div class="nav-text">Estadisticas</div>
+      </a>
+      <a routerLink="/lista" routerLinkActive="active" class="nav-link">
+        <div class="nav-text">lista de clientes</div>
+      </a>
     </nav>
   </header>
   <div class="content">
