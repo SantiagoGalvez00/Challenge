@@ -1,0 +1,214 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Challenge",
+    "description" : "Desafio tecnico",
+    "contact" : {
+      "email" : "galvez.santiago.92@gmail.com"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "/"
+  } ],
+  "tags" : [ {
+    "name" : "admins",
+    "description" : "Secured Admin-only calls"
+  }, {
+    "name" : "developers",
+    "description" : "Operations available to regular developers"
+  } ],
+  "paths" : {
+    "/crear-cliente" : {
+      "post" : {
+        "tags" : [ "developers" ],
+        "summary" : "Crear nuevo cliente",
+        "operationId" : "createNuevoCliente",
+        "parameters" : [ {
+          "name" : "nombre",
+          "in" : "query",
+          "required" : true,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "apellido",
+          "in" : "query",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "edad",
+          "in" : "query",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "minimum" : 0,
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }, {
+          "name" : "fechaNacimiento",
+          "in" : "query",
+          "description" : "Fecha de nacimiento del cliente (YYYY-MM-DD)",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Cliente creado",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/createNuevoCliente"
+                  }
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        }
+      }
+    },
+    "/kpi-clientes" : {
+      "get" : {
+        "tags" : [ "developers" ],
+        "summary" : "Estadisticas",
+        "description" : "Obtener estadisticas de promedio y desviacion estandar",
+        "operationId" : "kpiClientes",
+        "responses" : {
+          "200" : {
+            "description" : "Datos obtenidos",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/kpiClientes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/list-clientes" : {
+      "get" : {
+        "tags" : [ "developers" ],
+        "summary" : "Lista de clientes",
+        "operationId" : "listClientes",
+        "responses" : {
+          "200" : {
+            "description" : "Listado de clientes obtenidos",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "example" : [ {
+                    "nombre" : "Julio",
+                    "apellido" : "Cesar",
+                    "edad" : 32,
+                    "fechaNacimiento" : "1975-04-14",
+                    "fechaAproxMuerte" : "2077-10-30"
+                  }, {
+                    "nombre" : "Napoleon",
+                    "apellido" : "Bonaparte",
+                    "edad" : 59,
+                    "fechaNacimiento" : "1992-10-30",
+                    "fechaAproxMuerte" : "2055-10-30"
+                  } ],
+                  "items" : {
+                    "$ref" : "#/components/schemas/listClientes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "createNuevoCliente" : {
+        "required" : [ "apellido", "edad", "fechaNacimiento", "nombew" ],
+        "type" : "object",
+        "properties" : {
+          "nombre" : {
+            "type" : "string",
+            "example" : "Santiago"
+          },
+          "apellido" : {
+            "type" : "string",
+            "example" : "Galvez"
+          },
+          "edad" : {
+            "type" : "integer",
+            "example" : 32
+          },
+          "fechaNacimiento" : {
+            "type" : "string",
+            "example" : "1992-10-30"
+          }
+        }
+      },
+      "kpiClientes" : {
+        "type" : "object",
+        "properties" : {
+          "media" : {
+            "type" : "string",
+            "example" : "18.00"
+          },
+          "desviacionEstandar" : {
+            "type" : "string",
+            "example" : "34.15"
+          }
+        }
+      },
+      "listClientes" : {
+        "type" : "object",
+        "properties" : {
+          "nombre" : {
+            "type" : "string",
+            "example" : "Santiago"
+          },
+          "apellido" : {
+            "type" : "string",
+            "example" : "Galvez"
+          },
+          "edad" : {
+            "type" : "integer",
+            "example" : 32
+          },
+          "fechaNacimiento" : {
+            "type" : "string",
+            "example" : "1992-10-30"
+          },
+          "fechaAproxMuerte" : {
+            "type" : "string",
+            "example" : "2077-10-30"
+          }
+        }
+      }
+    }
+  }
+}
