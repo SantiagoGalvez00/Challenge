@@ -1,9 +1,18 @@
 <div class="view">
-    <h2>Lista de clientes</h2>
-    <div class="halfWidth box" *ngFor="let item of list">
-        <h3>{{item.nombre}} {{item.apellido}}</h3>
-        <div>Edad: {{item.edad}}</div>
-        <div>Fecha de nacimiento: {{item.fechaNacimiento}}</div>
-        <div>Fecha de muerte estimada: {{item.fechaAproxMuerte}}</div>
+    <h1>Lista de clientes</h1>
+    <div class="halfWidth cliente" *ngFor="let item of list">
+        <div class="nombre">{{item.nombre}} {{item.apellido}}</div>
+         <div class="isFlex mb">
+            <div class="label">Edad:</div>
+            <div>{{item.edad}}</div>
+        </div>
+         <div class="isFlex mb">
+            <div class="label">Fecha de nacimiento:</div>
+            <div>{{item.fechaNacimiento}}</div>
+        </div>
+         <div class="isFlex mb">
+            <div class="label">Fecha de muerte estimada:</div>
+            <div>{{item.fechaAproxMuerte}}</div>
+        </div>
     </div>
 </div>

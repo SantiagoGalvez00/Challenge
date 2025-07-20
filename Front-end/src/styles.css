@@ -69,3 +69,14 @@ body {
 .fullWidth { 
     width: 100%;
 }
+.halfWidth {
+    width: 50%;
+}
+
+.mb {
+    margin-bottom: 0.5rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
